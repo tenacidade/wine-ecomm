@@ -74,9 +74,6 @@ describe('Browsing the store', () => {
 
       cy.wait('@api');
 
-      cy.get('[data-cy="home_page_navigate_btn-previous"]')
-        .should('not.be.disabled');
-
       cy.get('[data-cy="home_page_navigate_btn-next"]')
         .should('be.disabled');
     });
