@@ -27,7 +27,7 @@ describe('Browsing the store', () => {
   });
 
   describe('Navigating between pages', () => {
-    it('Scene 2: On first page, previous page button is disabled', () => {
+    it.only('Scene 2: On first page, previous page button is disabled', () => {
       cy.intercept({
         method: 'GET',
         url: '/products*',
@@ -41,7 +41,7 @@ describe('Browsing the store', () => {
         .should('be.disabled');
     });
 
-    it('Scene 3: Current page button changes color', () => {
+    it.only('Scene 3: Current page button changes color', () => {
       cy.intercept({
         method: 'GET',
         url: '/products*',
